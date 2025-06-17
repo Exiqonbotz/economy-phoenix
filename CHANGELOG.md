@@ -4,7 +4,7 @@ Alle wichtigen Änderungen an diesem Projekt werden hier dokumentiert.
 
 Das Format basiert auf [Keep a Changelog](https://keepachangelog.com/de/1.0.0/).
 
-## [1.0.0] - 2025-06-17
+## [1.0.3] - 2025-06-17
 ### Added
 - Initiale Veröffentlichung von `economy-phoenix`
 - Wallet- und Bank-System
@@ -26,7 +26,7 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
-## [1.0.0] - 2025-06-17
+## [1.0.3] - 2025-06-17
 ### Added
 - Initial release of `economy-phoenix`
 - Wallet and bank system

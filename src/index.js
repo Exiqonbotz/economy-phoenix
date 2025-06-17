@@ -1,7 +1,8 @@
 const fs = require('fs');
 const path = require('path');
 
-const defaultPath = path.join(__dirname, '../economy.json');
+const defaultPath = path.join(process.cwd(), 'database', 'economy.json');
+
 
 function loadEconomy(dbPath = defaultPath) {
   if (!fs.existsSync(dbPath)) fs.writeFileSync(dbPath, '{}');
