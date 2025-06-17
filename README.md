@@ -9,6 +9,7 @@ Ursprünglich für den WhatsApp-Bot **Phoenix** entwickelt – jetzt für alle P
 
 **economy-phoenix** is a flexible economy system for Node.js projects.
 Originally developed for the WhatsApp bot Phoenix – now suitable for all projects.
+ 
 ---
 
 ## 🚀 Features
