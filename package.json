@@ -1,9 +1,25 @@
 {
   "name": "economy-phoenix",
   "version": "1.0.6",
-  "description": "Flexible Economy System for Node.js projects, originally developed for Phoenix Bot",
+  "description": "Flexible Economy System for Node.js projects. Originally developed for the Phoenix Bot, now available for general use.",
   "main": "src/index.js",
-  "keywords": ["economy", "wallet", "nodejs", "bot", "phoenix"],
-  "author": "Exiqon",
-  "license": "MIT"
+  "keywords": [
+    "economy",
+    "wallet",
+    "bank",
+    "currency",
+    "nodejs",
+    "bot",
+    "phoenix",
+    "money",
+    "coins",
+    "json-db"
+  ],
+  "author": "Exiqon <exiqon@phoenix.dev>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Exiqonbotz/economy-phoenix.git"
+  },
+  "My Profile": "https://github.com/Exiqonbotz"
 }
