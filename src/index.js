@@ -49,8 +49,8 @@ function deposit(userId, amount, dbPath = defaultPath) {
     return { noten: true, amount: 0, message: 'Bankkapazität überschritten.' };
   }
 
-  user.wallet -= amount;
-  user.bank += amount;
+  db[userId].wallet -= amount;
+  db[userId].bank += amount;
   saveEconomy(db, dbPath);
 
   return { noten: false, amount: amount };
@@ -64,8 +64,8 @@ function withdraw(userId, amount, dbPath = defaultPath) {
     return { noten: true, amount: 0, message: 'Nicht genug auf der Bank.' };
   }
 
-  user.bank -= amount;
-  user.wallet += amount;
+  db[userId].bank -= amount;
+  db[userId].wallet += amount;
   saveEconomy(db, dbPath);
 
   return { noten: false, amount: amount };
@@ -76,7 +76,7 @@ function deduct(userId, amount, dbPath = defaultPath) {
   const user = getUserEconomy(userId, dbPath);
 
   if (user.wallet < amount) return false;
-  user.wallet -= amount;
+  db[userId].wallet -= amount;
   saveEconomy(db, dbPath);
   return true;
 }
@@ -85,7 +85,7 @@ function give(userId, amount, dbPath = defaultPath) {
   const db = loadEconomy(dbPath);
   const user = getUserEconomy(userId, dbPath);
 
-  user.wallet += amount;
+  db[userId].wallet += amount;
   saveEconomy(db, dbPath);
   return true;
 }
@@ -100,7 +100,7 @@ function giveCapacity(userId, capacity, dbPath = defaultPath) {
   const db = loadEconomy(dbPath);
   const user = getUserEconomy(userId, dbPath);
 
-  user.bankCapacity = capacity;
+  db[userId].bankCapacity = capacity;
   saveEconomy(db, dbPath);
   return true;
 }
@@ -125,8 +125,8 @@ function daily(userId, rewardAmount = 999, dbPath = defaultPath) {
     };
   }
 
-  user.wallet += rewardAmount;
-  user.lastDaily = now;
+  db[userId].wallet += rewardAmount;
+  db[userId].lastDaily = now;
   db[userId] = user;
   saveEconomy(db, dbPath);
 
