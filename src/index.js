@@ -104,7 +104,6 @@ function giveCapacity(userId, capacity, dbPath = defaultPath) {
   saveEconomy(db, dbPath);
   return true;
 }
-
 function daily(userId, rewardAmount = 999, dbPath = defaultPath) {
   const db = loadEconomy(dbPath);
   const user = getUserEconomy(userId, dbPath);
@@ -127,8 +126,7 @@ function daily(userId, rewardAmount = 999, dbPath = defaultPath) {
 
   db[userId].wallet += rewardAmount;
   db[userId].lastDaily = now;
-  db[userId] = user;
-  saveEconomy(db, dbPath);
+  saveEconomy(db, dbPath); // Jetzt speicherst du korrekt
 
   return {
     cd: false,

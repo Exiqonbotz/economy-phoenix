@@ -1,6 +1,6 @@
 {
   "name": "economy-phoenix",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Flexible Economy System for Node.js projects. Originally developed for the Phoenix Bot, now available for general use.",
   "main": "src/index.js",
   "keywords": [
