@@ -100,10 +100,13 @@ function giveCapacity(userId, capacity, dbPath = defaultPath) {
   const db = loadEconomy(dbPath);
   const user = getUserEconomy(userId, dbPath);
 
-  db[userId].bankCapacity = capacity;
+  if (!db[userId].bankCapacity) db[userId].bankCapacity = 0; // Falls es nicht existiert
+  db[userId].bankCapacity += capacity;
+
   saveEconomy(db, dbPath);
   return true;
 }
+
 function daily(userId, rewardAmount = 999, dbPath = defaultPath) {
   const db = loadEconomy(dbPath);
   const user = getUserEconomy(userId, dbPath);
