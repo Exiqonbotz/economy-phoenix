@@ -7,7 +7,7 @@ const path = require('path');
 const defaultPath = path.join(__dirname, '..', 'database', 'economy.json');
 
 /** Default-Kapazitäten (kannst du bei Bedarf anpassen) */
-const DEFAULT_WALLET_CAP = 1000000n;
+const DEFAULT_WALLET_CAP = 100000000n;
 const DEFAULT_BANK_CAP   = 10000000n;
 
 /**
